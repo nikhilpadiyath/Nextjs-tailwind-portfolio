@@ -4,9 +4,10 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub} from "react-icons/ai";
 import Image from 'next/image';
 import avatar from '/public/My-avatar.jpg';
-import design from '/public/design.png';
+import post from '/public/post.jpg';
 import code from '/public/code.png';
-import consulting from '/public/consulting.png';
+import portfolio from '/public/portfolio.jpg'
+import github from '/public/GitHub.png'
 import { useState} from 'react';
 import {useRouter} from 'next/navigation';
 
@@ -32,7 +33,7 @@ export default function Home() {
       <section className= "min-h-screen">
         <nav className="py-10 mb-12 flex justify-between">
           <h1 className="text-xl font-burtons dark:text-white">nikhilpadiyath@gmail.com</h1>
-          <h1 className="text-xl font-burtons dark:text-white">Contact: +91 8885260788</h1>
+
           <ul className="flex items-center">
             <li>
               <BsFillMoonStarsFill 
@@ -66,15 +67,29 @@ export default function Home() {
       <section>
         <div>
           <h3 className="text-2xl py-2 my-5 dark:text-white">Projects I have done so far...</h3>
-          <p className="text-md py-5 leading-8 text-gray-600 dark:text-pink-300">
-            I am a beginner in the coding field, so I will be really helpful in the junior level developing in <span className= "text-teal-500">React</span> using <span className= "text-teal-500">JavaScript</span>.
-            I have done a couple of projects using <span className= "text-teal-500">React, Redux, NextJS, Tailwind CSS using JavScript,CSS and HTML </span>which is available in my GIT page for your reference.
+          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-600">
+            I am a beginner in the coding field, so I will be really helpful in the junior level developing in <span className= "text-teal-500 dark:text-orange-600">React</span> using <span className= "text-teal-500">JavaScript</span>.
+            I have done a couple of projects in <span className= "text-teal-500 dark:text-orange-600">React, Redux, NextJS, Tailwind CSS using JavaScript,CSS and HTML </span>which is available in my GIT page for your reference.
           </p>
         </div>
         <div className="lg:flex gap-10">
-          <div className="text-center shadow-lg p-10 rounded-xl my-10">
-            <Image src={design} width={100} height={100} />
+        <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <Image src={github} width={100} height={100} />
             <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 1</h3>
+           
+            <h4 className= "text-teal-600 py-4">Github Finder</h4>
+            <p className=" dark:text-white">
+              The utilities I used here are:
+            </p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">React</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">Tailwind CSS</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">JSON Server</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">Github API</p>
+          </div>
+
+          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <Image src={portfolio} width={100} height={100} />
+            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 2</h3>
            
             <h4 className= "text-teal-600 py-4">Portfolio</h4>
             <p className=" dark:text-white">
@@ -87,8 +102,8 @@ export default function Home() {
           </div>
 
           <div className="text-center shadow-lg p-10 rounded-xl my-10">
-            <Image src={code} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 2</h3>
+            <Image src={post} width={100} height={100} />
+            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 3</h3>
            
             <h4 className= "text-teal-600 py-4">Post Feed</h4>
             <p  className="dark:text-white">
@@ -101,8 +116,8 @@ export default function Home() {
           </div>
 
           <div className="text-center shadow-lg p-10 rounded-xl my-10">
-            <Image src={consulting} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 3</h3>
+            <Image src={code} width={100} height={100} />
+            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 4</h3>
             
             <h4 className= "text-teal-600 py-4">Contact Manager</h4>
             <p className=" dark:text-white">
@@ -111,16 +126,18 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">React</p>
             <p className= "text-gray-600 py-1 dark:text-pink-300">JavaScript</p>
             <p className= "text-gray-600 py-1 dark:text-pink-300">HTML & CSS</p>
-            <p className= "text-gray-600 py-1 dark:text-pink-300">React-Router-DOM</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">JSON Server</p>
           </div>
         </div>
       </section>
       <section>
         <div>
           <h3 className=" text-3xl py-1  dark:text-white">Portfolio</h3>
-          <p className="text-md py-5 leading-8 text-gray-600 dark:text-pink-300">
-            I am a beginner in the coding field, so I will be really hepful in the junior level developing in <span className= "text-teal-500">React</span> using <span className= "text-teal-500">JavaScript/TypeScript</span>.
-            I have done a couple of projects using <span className= "text-teal-500">React, Redux, NextJS, Tailwind CSS using JavScript,CSS and HTML </span>which is available in my GIT page for your reference.
+          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-600">
+            I am regularly working on various projects in <span className= "text-teal-500 dark:text-orange-600">React JS </span>associating with many libraries 
+            like <span className= "text-teal-500 dark:text-orange-600">Redux, JSON Server</span> collaborating with many user interface frameworks like 
+            <span className= "text-teal-500 dark:text-orange-600">Tailwind CSS, Semantic UI</span>  etc. All my projects are available in my GitHub page.
+            
           </p>
         </div>
       </section>
