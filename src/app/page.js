@@ -6,8 +6,9 @@ import Image from 'next/image';
 import avatar from '/public/My-avatar.jpg';
 import post from '/public/post.jpg';
 import code from '/public/code.png';
-import portfolio from '/public/portfolio.jpg'
-import github from '/public/GitHub.png'
+import portfolio from '/public/portfolio.jpg';
+import github from '/public/GitHub.png';
+import badge from '/public/HR Badge.png'
 import { useState} from 'react';
 import {useRouter} from 'next/navigation';
 
@@ -36,8 +37,11 @@ export default function Home() {
 
           <ul className="flex items-center">
             <li>
+              <p className="dark:text-white">Switch to dark/light theme</p>
+              </li>
+            <li>
               <BsFillMoonStarsFill 
-              className="cursor-pointer text-2x  dark:text-white"
+              className="cursor-pointer text-2x ml-5  dark:text-white"
               onClick= {()=> setDarkMode(!darkMode)}
               />
             </li>
@@ -67,8 +71,8 @@ export default function Home() {
       <section>
         <div>
           <h3 className="text-2xl py-2 my-5 dark:text-white">Projects I have done so far...</h3>
-          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-600">
-            I am a beginner in the coding field, so I will be really helpful in the junior level developing in <span className= "text-teal-500 dark:text-orange-600">React</span> using <span className= "text-teal-500">JavaScript</span>.
+          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-400">
+            I am a beginner in the coding field, so I will be really helpful in the junior level developing in <span className= "text-teal-500 dark:text-orange-600">React</span> using <span className= "text-teal-500 dark:text-orange-600">JavaScript</span>.
             I have done a couple of projects in <span className= "text-teal-500 dark:text-orange-600">React, Redux, NextJS, Tailwind CSS using JavaScript,CSS and HTML </span>which is available in my GIT page for your reference.
           </p>
         </div>
@@ -133,12 +137,15 @@ export default function Home() {
       <section>
         <div>
           <h3 className=" text-3xl py-1  dark:text-white">Portfolio</h3>
-          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-600">
+          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-400">
             I am regularly working on various projects in <span className= "text-teal-500 dark:text-orange-600">React JS </span>associating with many libraries 
             like <span className= "text-teal-500 dark:text-orange-600">Redux, JSON Server</span> collaborating with many user interface frameworks like 
             <span className= "text-teal-500 dark:text-orange-600">Tailwind CSS, Semantic UI</span>  etc. All my projects are available in my GitHub page.
-            
+            I have earned a rank of below 10,000 among lakhs of developers at HackerRank in Euler's Project. 
           </p>
+          <div>
+            <Image src={badge} width={100} height={100} />
+        </div>
         </div>
       </section>
 
