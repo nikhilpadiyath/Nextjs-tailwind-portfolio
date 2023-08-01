@@ -1,14 +1,18 @@
 "use client";
 import Head from 'next/head';
+
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub} from "react-icons/ai";
+
 import Image from 'next/image';
 import avatar from '/public/My-avatar.jpg';
 import post from '/public/post.jpg';
 import code from '/public/code.png';
 import portfolio from '/public/portfolio.jpg';
 import github from '/public/GitHub.png';
-import badge from '/public/HR Badge.png'
+import badge from '/public/HR Badge.png';
+import feedback from '/public/Feedback.png';
+
 import { useState} from 'react';
 import {useRouter} from 'next/navigation';
 
@@ -106,8 +110,23 @@ export default function Home() {
           </div>
 
           <div className="text-center shadow-lg p-10 rounded-xl my-10">
-            <Image src={post} width={100} height={100} />
+            <Image className="ml-10" src={feedback} width={100} height={100} />
             <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 3</h3>
+           
+            <h4 className= "text-teal-600 py-4">Feedback App</h4>
+            <p  className="dark:text-white">
+              The utilities I used here are:
+            </p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">React</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">JSON Server</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">Axios</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">JavaScript/CSS/HTML</p>
+          </div>
+
+          
+          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <Image src={post} width={100} height={100} />
+            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 4</h3>
            
             <h4 className= "text-teal-600 py-4">Post Feed</h4>
             <p  className="dark:text-white">
@@ -121,16 +140,17 @@ export default function Home() {
 
           <div className="text-center shadow-lg p-10 rounded-xl my-10">
             <Image src={code} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 4</h3>
+            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 5</h3>
             
             <h4 className= "text-teal-600 py-4">Contact Manager</h4>
             <p className=" dark:text-white">
               The utilities I used here are:
             </p>
             <p className= "text-gray-600 py-1 dark:text-pink-300">React</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">JSON Server/Axios</p>
             <p className= "text-gray-600 py-1 dark:text-pink-300">JavaScript</p>
             <p className= "text-gray-600 py-1 dark:text-pink-300">HTML & CSS</p>
-            <p className= "text-gray-600 py-1 dark:text-pink-300">JSON Server</p>
+            
           </div>
         </div>
       </section>
