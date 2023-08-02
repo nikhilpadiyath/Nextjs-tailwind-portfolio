@@ -80,8 +80,8 @@ export default function Home() {
             I have done a couple of projects in <span className= "text-teal-500 dark:text-orange-600">React, Redux, NextJS, Tailwind CSS using JavaScript,CSS and HTML </span>which is available in my GIT page for your reference.
           </p>
         </div>
-        <div className="lg:flex gap-10">
-        <div className="text-center shadow-lg p-10 rounded-xl my-10">
+        <div className="grid grid-cols-1 gap-10 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+        <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
             <Image src={github} width={100} height={100} />
             <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 1</h3>
            
@@ -95,7 +95,7 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">Github API</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
             <Image src={portfolio} width={100} height={100} />
             <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 2</h3>
            
@@ -109,7 +109,7 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">HTML</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
             <Image className="ml-10" src={feedback} width={100} height={100} />
             <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 3</h3>
            
@@ -124,7 +124,7 @@ export default function Home() {
           </div>
 
           
-          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
             <Image src={post} width={100} height={100} />
             <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 4</h3>
            
@@ -138,7 +138,7 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">JavaScript/CSS/HTML</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
             <Image src={code} width={100} height={100} />
             <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 5</h3>
             
@@ -160,7 +160,7 @@ export default function Home() {
           <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-400">
             I am regularly working on various projects in <span className= "text-teal-500 dark:text-orange-600">React JS </span>associating with many libraries 
             like <span className= "text-teal-500 dark:text-orange-600">Redux, JSON Server</span> collaborating with many user interface frameworks like 
-            <span className= "text-teal-500 dark:text-orange-600">Tailwind CSS, Semantic UI</span>  etc. All my projects are available in my GitHub page.
+            <span className= "text-teal-500 dark:text-orange-600"> Tailwind CSS, Semantic UI</span>  etc. All my projects are available in my GitHub page.
             I have earned a rank of below 10,000 among lakhs of developers at HackerRank in Euler's Project. 
           </p>
           <div>
