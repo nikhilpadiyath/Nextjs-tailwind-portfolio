@@ -12,6 +12,8 @@ import portfolio from '/public/portfolio.jpg';
 import github from '/public/GitHub.png';
 import badge from '/public/HR Badge.png';
 import feedback from '/public/Feedback.png';
+import housemarket from '/public/house-market.jpeg'
+import samskara from '/public/samskara.png'
 
 import { useState} from 'react';
 import {useRouter} from 'next/navigation';
@@ -60,7 +62,7 @@ export default function Home() {
           <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Nikhil Padiyath</h2>
           <h3 className="text-2xl py-2 md:text-3xl dark:text-white">Front-end Developer || React</h3>
           <p className="text-md py-5 leading-8 text-gray-600 md:text-xl max-w-xl mx-auto  dark:text-pink-300">
-            Fresher in React developing with good skills in JavaScript, CSS, HTML and Node JS.
+            Fresher in React developing with good skills in NextJS framework, JavaScript, CSS, HTML and Node JS.
             Can handle Redux, GIT, Tailwind CSS and other relevant libraries
           </p>
         </div>
@@ -76,16 +78,43 @@ export default function Home() {
         <div>
           <h3 className="text-2xl py-2 my-5 dark:text-white">Projects I have done so far...</h3>
           <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-400">
-            I am a beginner in the coding field, so I will be really helpful in the junior level developing in <span className= "text-teal-500 dark:text-orange-600">React</span> using <span className= "text-teal-500 dark:text-orange-600">JavaScript</span>.
-            I have done a couple of projects in <span className= "text-teal-500 dark:text-orange-600">React, Redux, NextJS, Tailwind CSS using JavaScript,CSS and HTML </span>which is available in my GIT page for your reference.
+            I am a beginner in the coding field, so I will be really helpful in the junior level developing in <span className= "text-teal-500 dark:text-orange-600">React and NextJS</span> using <span className= "text-teal-500 dark:text-orange-600">JavaScript</span>.
+            I have done a couple of projects in <span className= "text-teal-500 dark:text-orange-600">React, Redux, NextJS, Tailwind CSS using JavaScript,CSS and HTML </span>which is available in my GIT page for your reference. Also, I m thankful to be a part of an event creating platform called <span className= "text-teal-500 dark:text-orange-600">Samskara</span>
           </p>
         </div>
         <div className="grid grid-cols-1 gap-10 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
-        <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
-            <Image src={github} width={100} height={100} />
+        <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200 ">
+            <Image src={samskara} width={150} height={150} />
             <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 1</h3>
            
-            <h4 className= "text-teal-600 py-4">Github Finder</h4>
+            <h4 className= "text-teal-600 py-4 font-bold text-2xl">Samskara</h4>
+            <p className=" dark:text-white">
+              The utilities I used here are:
+            </p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">NextJS</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">Tailwind CSS</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">DND Kit</p>
+            </div>
+
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
+            <Image src={housemarket} width={100} height={100} />
+            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 2</h3>
+           
+            <h4 className= "text-teal-600 py-4 font-bold text-2xl">House Marketplace</h4>
+            <p className=" dark:text-white">
+              The utilities I used here are:
+            </p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">React</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">Firebase</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">Toastify</p>
+            <p className= "text-gray-600 py-1 dark:text-pink-300">Swiper</p>
+          </div>
+
+        <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
+            <Image src={github} width={100} height={100} />
+            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 3</h3>
+           
+            <h4 className= "text-teal-600 py-4 font-bold text-2xl">Github Finder</h4>
             <p className=" dark:text-white">
               The utilities I used here are:
             </p>
@@ -95,11 +124,11 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">Github API</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
             <Image src={portfolio} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 2</h3>
+            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 4</h3>
            
-            <h4 className= "text-teal-600 py-4">Portfolio</h4>
+            <h4 className= "text-teal-600 py-4 font-bold text-2xl">Portfolio</h4>
             <p className=" dark:text-white">
               The utilities I used here are:
             </p>
@@ -109,11 +138,11 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">HTML</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
             <Image className="ml-10" src={feedback} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 3</h3>
+            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 5</h3>
            
-            <h4 className= "text-teal-600 py-4">Feedback App</h4>
+            <h4 className= "text-teal-600 py-4 font-bold text-2xl">Feedback App</h4>
             <p  className="dark:text-white">
               The utilities I used here are:
             </p>
@@ -124,11 +153,11 @@ export default function Home() {
           </div>
 
           
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
             <Image src={post} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 4</h3>
+            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 6</h3>
            
-            <h4 className= "text-teal-600 py-4">Post Feed</h4>
+            <h4 className= "text-teal-600 py-4 font-bold text-2xl">Post Feed</h4>
             <p  className="dark:text-white">
               The utilities I used here are:
             </p>
@@ -138,11 +167,11 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">JavaScript/CSS/HTML</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 ">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
             <Image src={code} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 5</h3>
+            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 7</h3>
             
-            <h4 className= "text-teal-600 py-4">Contact Manager</h4>
+            <h4 className= "text-teal-600 py-4 font-bold text-2xl">Contact Manager</h4>
             <p className=" dark:text-white">
               The utilities I used here are:
             </p>
