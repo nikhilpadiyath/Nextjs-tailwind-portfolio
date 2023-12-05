@@ -1,5 +1,6 @@
 "use client";
 import Head from 'next/head';
+import Link from 'next/link';
 
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub} from "react-icons/ai";
@@ -14,6 +15,7 @@ import badge from '/public/HR Badge.png';
 import feedback from '/public/Feedback.png';
 import housemarket from '/public/house-market.jpeg'
 import samskara from '/public/samskara.png'
+import udemy from '/public/udemy.png'
 
 import { useState} from 'react';
 import {useRouter} from 'next/navigation';
@@ -25,9 +27,9 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const router= useRouter();
 
-  const handleClick=() => {
-    router.push('/nikhil-resume');
-  };
+ // const handleClick=() => {
+ //   router.push('/nikhil-resume');
+ // };
 
   return (
     <div className= {darkMode ? "dark" : ""} >
@@ -38,12 +40,12 @@ export default function Home() {
       </Head>
     <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
       <section className= "min-h-screen">
-        <nav className="py-10 mb-12 flex justify-between">
-          <h1 className="text-xl font-burtons dark:text-white">nikhilpadiyath@gmail.com</h1>
+        <nav className="py-10 sm:py-4 mb-12 lg:mb-6 lg:ml-20 sm:mb-4 flex flex-wrap justify-between">
+          <h1 className="text-xl font-burtons dark:text-white sm:text-sm sm:mb-4">nikhilpadiyath@gmail.com</h1>
 
-          <ul className="flex items-center">
+          <ul className="flex items-center my-4 sm:my-1">
             <li>
-              <p className="dark:text-white">Switch to dark/light theme</p>
+              <p className="dark:text-white sm:text-sm ">Switch Theme</p>
               </li>
             <li>
               <BsFillMoonStarsFill 
@@ -51,41 +53,43 @@ export default function Home() {
               onClick= {()=> setDarkMode(!darkMode)}
               />
             </li>
-            <li>
+            <li className="lg:ml-30">
+              <Link href="/Resume_Nikhil.pdf" target="_blank">
               <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8  dark:text-gray-800"
-                      onClick= {handleClick}
               >Resume</button> 
+              </Link>
             </li>
           </ul>
         </nav>
-        <div className="text-center p-10">
-          <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Nikhil Padiyath</h2>
+        <div className="text-center p-10 lg:p-6 sm:p-2">
+          <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl sm:text-4xl">Nikhil Padiyath</h2>
           <h3 className="text-2xl py-2 md:text-3xl dark:text-white">Front-end Developer || React</h3>
-          <p className="text-md py-5 leading-8 text-gray-600 md:text-xl max-w-xl mx-auto  dark:text-pink-300">
+          <p className="text-md sm:text-base py-5 leading-8 sm:leading-14 text-gray-600 lg:text-xl max-w-xl mx-auto  dark:text-pink-300">
             Fresher in React developing with good skills in NextJS framework, JavaScript, CSS, HTML and Node JS.
-            Can handle Redux, GIT, Tailwind CSS and other relevant libraries
+            Can handle Redux, GIT, Tailwind CSS and other relevant libraries. Got a certification in Udemy in React: Front to Back by Brad Traversey
           </p>
         </div>
         <div className=" text-5xl flex justify-center gap-16 py-3 text-gray-800  dark:text-white">
           <AiFillLinkedin className="cursor-pointer" onClick={()=> router.push('https://www.linkedin.com/in/nikhil-padiyath')}/>
           <AiFillGithub className="cursor-pointer" onClick={()=> router.push('https://github.com/nikhilpadiyath')}/>
+          <Image src={udemy} className="cursor-pointer" width={50} height={50} onClick={()=> router.push('https://www.udemy.com/certificate/UC-349b9026-fa08-4767-ba26-7e576ea68f84/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com')}/>
         </div>
-        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 sm:h-60 sm:w-60">
           <Image src={avatar} fill objectFit="cover" />
         </div>       
       </section >
       <section>
         <div>
-          <h3 className="text-2xl py-2 my-5 dark:text-white">Projects I have done so far...</h3>
-          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-400">
+          <h3 className="text-2xl sm:text-lg py-2 my-5 dark:text-white">Projects I have done so far...</h3>
+          <p className="text-md sm:text-sm py-5 leading-8 sm:leading-loose text-gray-600 dark:text-purple-400">
             I am a beginner in the coding field, so I will be really helpful in the junior level developing in <span className= "text-teal-500 dark:text-orange-600">React and NextJS</span> using <span className= "text-teal-500 dark:text-orange-600">JavaScript</span>.
             I have done a couple of projects in <span className= "text-teal-500 dark:text-orange-600">React, Redux, NextJS, Tailwind CSS using JavaScript,CSS and HTML </span>which is available in my GIT page for your reference. Also, I m thankful to be a part of an event creating platform called <span className= "text-teal-500 dark:text-orange-600">Samskara</span>
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-10 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
-        <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200 ">
-            <Image src={samskara} width={150} height={150} />
-            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 1</h3>
+        <div className="flex flex-wrap gap-2 justify-center sm:text-sm">
+        <div className="text-center shadow-lg p-10 sm:p-4 rounded-xl my-10 sm:my-4 hover:border-2 hover:border-slate-200 ">
+            <Image src={samskara} width={150} height={100} />
+            <h3 className="text-lg font-medium pt-8 sm:pt-2 pb-2 dark:text-white">Project 1</h3>
            
             <h4 className= "text-teal-600 py-4 font-bold text-2xl">Samskara</h4>
             <p className=" dark:text-white">
@@ -96,9 +100,9 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">DND Kit</p>
             </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
+          <div className="text-center shadow-lg p-10 sm:p-4 rounded-xl my-10 sm:my-4 hover:border-2 hover:border-slate-200">
             <Image src={housemarket} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 2</h3>
+            <h3 className="text-lg font-medium pt-8 sm:pt-2 pb-2 dark:text-white">Project 2</h3>
            
             <h4 className= "text-teal-600 py-4 font-bold text-2xl">House Marketplace</h4>
             <p className=" dark:text-white">
@@ -110,9 +114,9 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">Swiper</p>
           </div>
 
-        <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
+        <div className="text-center shadow-lg p-10 sm:p-4 rounded-xl my-10 sm:my-4 hover:border-2 hover:border-slate-200">
             <Image src={github} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 3</h3>
+            <h3 className="text-lg font-medium pt-8 sm:pt-2 pb-2 dark:text-white">Project 3</h3>
            
             <h4 className= "text-teal-600 py-4 font-bold text-2xl">Github Finder</h4>
             <p className=" dark:text-white">
@@ -124,9 +128,9 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">Github API</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
+          <div className="text-center shadow-lg p-10 sm:p-4 rounded-xl my-10 sm:my-4 hover:border-2 hover:border-slate-200">
             <Image src={portfolio} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Project 4</h3>
+            <h3 className="text-lg font-medium pt-8 sm:pt-2 pb-2 dark:text-white">Project 4</h3>
            
             <h4 className= "text-teal-600 py-4 font-bold text-2xl">Portfolio</h4>
             <p className=" dark:text-white">
@@ -138,9 +142,9 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">HTML</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
+          <div className="text-center shadow-lg p-10 sm:p-4 rounded-xl my-10 sm:my-4 hover:border-2 hover:border-slate-200">
             <Image className="ml-10" src={feedback} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 5</h3>
+            <h3 className="text-lg font-medium pt-8 sm:pt-2 pb-2  dark:text-white">Project 5</h3>
            
             <h4 className= "text-teal-600 py-4 font-bold text-2xl">Feedback App</h4>
             <p  className="dark:text-white">
@@ -153,9 +157,9 @@ export default function Home() {
           </div>
 
           
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
+          <div className="text-center shadow-lg p-10 sm:p-4 rounded-xl my-10 sm:my-4 hover:border-2 hover:border-slate-200">
             <Image src={post} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 6</h3>
+            <h3 className="text-lg font-medium pt-8 sm:pt-2 pb-2  dark:text-white">Project 6</h3>
            
             <h4 className= "text-teal-600 py-4 font-bold text-2xl">Post Feed</h4>
             <p  className="dark:text-white">
@@ -167,9 +171,9 @@ export default function Home() {
             <p className= "text-gray-600 py-1 dark:text-pink-300">JavaScript/CSS/HTML</p>
           </div>
 
-          <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:border-2 hover:border-slate-200">
+          <div className="text-center shadow-lg p-10 sm:p-4 rounded-xl my-10 sm:my-4 hover:border-2 hover:border-slate-200">
             <Image src={code} width={100} height={100} />
-            <h3 className="text-lg font-medium pt-8 pb-2  dark:text-white">Project 7</h3>
+            <h3 className="text-lg font-medium pt-8 sm:pt-2 pb-2  dark:text-white">Project 7</h3>
             
             <h4 className= "text-teal-600 py-4 font-bold text-2xl">Contact Manager</h4>
             <p className=" dark:text-white">
@@ -185,14 +189,16 @@ export default function Home() {
       </section>
       <section>
         <div>
-          <h3 className=" text-3xl py-1  dark:text-white">Portfolio</h3>
-          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-400">
+          <h3 className=" text-3xl sm:text-2xl py-1  dark:text-white">Portfolio</h3>
+          <p className="text-md py-5 leading-8 text-gray-600 dark:text-purple-400 sm:text-xs sm:p-6 sm:leading-6">
             I am regularly working on various projects in <span className= "text-teal-500 dark:text-orange-600">React JS </span>associating with many libraries 
             like <span className= "text-teal-500 dark:text-orange-600">Redux, JSON Server</span> collaborating with many user interface frameworks like 
             <span className= "text-teal-500 dark:text-orange-600"> Tailwind CSS, Semantic UI</span>  etc. All my projects are available in my GitHub page.
-            I have earned a rank of below 10,000 among lakhs of developers at HackerRank in Euler's Project. 
+            I have earned a certification in <span className= "text-teal-500 dark:text-orange-600">'React: Front to Back' in Udemy</span>. Also, I have earned a rank of below 10,000 among lakhs of developers at HackerRank in Euler's Project. 
           </p>
-          <div>
+          <div className="flex justify-around">
+            
+            <Image src={udemy} className="cursor-pointer" width={100} height={100} onClick={()=> router.push('https://www.udemy.com/certificate/UC-349b9026-fa08-4767-ba26-7e576ea68f84/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com')}/>
             <Image src={badge} width={100} height={100} />
         </div>
         </div>
